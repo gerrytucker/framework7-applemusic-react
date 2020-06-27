@@ -29,7 +29,7 @@ const Radio = () => {
   const editorsChoice = apps.slice(5);
 
   return (
-    <AppstorePage title="Apps">
+    <AppstorePage title="Radio" accountLink={false}>
       <FeaturedApps backText="Apps" apps={featuredApps} useIcon />
 
       <AppstoreBlockTitle title="Using Now">
