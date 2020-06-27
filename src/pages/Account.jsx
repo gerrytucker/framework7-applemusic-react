@@ -1,6 +1,7 @@
 import React from 'react';
 import {
   BlockFooter,
+  BlockTitle,
   Popup,
   Page,
   Navbar,
@@ -36,6 +37,12 @@ const Account = () => {
             title="Notifications"
             link
           />
+        </List>
+        <BlockTitle>
+          <p>APPS WITH ACCESS</p>
+        </BlockTitle>
+        <List>
+          <ListItem>Apple Music and TV Web Player</ListItem>
         </List>
       </Page>
     </Popup>
