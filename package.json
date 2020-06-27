@@ -1,12 +1,12 @@
 {
-  "name": "app-store",
+  "name": "apple-music",
   "private": true,
   "version": "1.0.0",
   "description": "Apple Music",
   "repository": "",
   "license": "UNLICENSED",
   "framework7": {
-    "cwd": "/Users/vladimirkharlampidi/GitHub/framework7-react-appstore",
+    "cwd": "/Users/gerry/GitHub/framework7-react-applemusic",
     "type": [
       "pwa"
     ],
@@ -17,7 +17,7 @@
     "cssPreProcessor": "less",
     "theming": {
       "customColor": false,
-      "color": "#007aff",
+      "color": "#ff3b30",
       "darkTheme": false,
       "iconFonts": true,
       "fillBars": false
