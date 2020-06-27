@@ -6,7 +6,7 @@ import {
 
 import AppstorePage from '../components/AppstorePage';
 
-const Arcade = () => {
+const Library = () => {
   return (
     <AppstorePage title="Arcade">
       <Block>Work in progress</Block>
@@ -14,4 +14,4 @@ const Arcade = () => {
   );
 };
 
-export default Arcade;
+export default Library;

@@ -4,28 +4,21 @@ import React from 'react';
 import AppstorePage from '../components/AppstorePage';
 import AppstorePageTitle from '../components/AppstorePageTitle';
 import AppstoreCard from '../components/AppstoreCard';
-import './Today.less';
+import './Listen.less';
 
 import arcadeCardImage from '../assets/arcade.jpg';
 
 import { apps, games } from '../js/data';
 
-const Today = () => {
-  const todayDate = new Date();
-  const todayDateTitle = 'Today';
-  const todayDateHeading = new Intl.DateTimeFormat('en', { day: 'numeric', month: 'long', weekday: 'long' }).format(todayDate);
-  const yesterdayDate = new Date(new Date().getTime() - 24 * 60 * 60 * 1000);
-  const yesterdayDateTitle = new Intl.DateTimeFormat('en', { weekday: 'long' }).format(yesterdayDate);
-  const yesterdayDateHeading = new Intl.DateTimeFormat('en', { day: 'numeric', month: 'long' }).format(yesterdayDate);
+const Listen = () => {
+  const listenTitle = 'Listen Now';
 
   const appCrossyRoad = games.find((app) => app.title === 'Crossy Road');
-  const appNetlfix = apps.find((app) => app.title === 'Netflix');
-  const appInstagram = apps.find((app) => app.title === 'Instagram');
-  const appSevenSins = games.find((app) => app.title === 'The Seven Deadly Sins');
+  const appNetflix = apps.find((app) => app.title === 'Netflix');
 
   return (
     <AppstorePage noCollapsedNavbar>
-      <AppstorePageTitle title={todayDateTitle} heading={todayDateHeading} accountLink />
+      <AppstorePageTitle title={listenTitle} accountLink />
       <div className="appstore-card-grid">
         <AppstoreCard
           image={arcadeCardImage}
@@ -64,7 +57,7 @@ const Today = () => {
           titleColor="#fff"
           titlePosition="bottom"
           titleLarge
-          app={appNetlfix}
+          app={appNetflix}
         >
           <p>Lorem ipsum, <b>dolor sit amet consectetur adipisicing</b> elit. Explicabo sapiente nisi accusantium earum quos culpa quam doloremque distinctio suscipit nobis corrupti eaque, debitis quasi quisquam rerum quas beatae dolorem eos?</p>
           <p>Magnam obcaecati fugit, ullam nostrum in dolore sed ab culpa ipsum architecto sunt distinctio necessitatibus et. Quam laborum delectus tenetur rem quae itaque ad numquam, eveniet, repudiandae quas eum unde?</p>
@@ -74,41 +67,8 @@ const Today = () => {
         </AppstoreCard>
       </div>
 
-      <AppstorePageTitle title={yesterdayDateTitle} heading={yesterdayDateHeading} accountLink={false} />
-      <div className="appstore-card-grid">
-        <AppstoreCard
-          image="static/apps-images/the-seven-deadly-sins-8.jpg"
-          title={(<span>GAME<br />OF THE<br />DAY</span>)}
-          titleColor="#fff"
-          titlePosition="bottom"
-          titleLarge
-          app={appSevenSins}
-        >
-          <p>Lorem ipsum dolor sit amet <b>consectetur adipisicing elit</b>. Quam corporis minima inventore? Quod unde ex fugiat itaque consequuntur, rem assumenda dolor beatae incidunt facere dolorem nobis repellat expedita sed ea?</p>
-          <p>Ducimus, eveniet ea adipisci, impedit repellendus rem doloremque minima incidunt nihil cumque voluptatibus quos laudantium animi quibusdam odio molestias iusto delectus voluptatem! Totam laborum rem numquam temporibus possimus quae iure?</p>
-          <h3>Minus at repudiandae</h3>
-          <p>Repellendus qui possimus repellat? Voluptas distinctio asperiores impedit enim corporis dolores nulla eius provident dignissimos? Minus at repudiandae consequuntur dolorem magni quibusdam perferendis animi amet tenetur eos iure, id sint.</p>
-          <p>Dolore exercitationem consequuntur excepturi? Voluptatem totam adipisci illum voluptate, iste quia, excepturi non culpa, reprehenderit repudiandae labore itaque! Cupiditate, harum laborum mollitia quidem tempora est saepe perspiciatis fugiat quia neque.</p>
-        </AppstoreCard>
-        <AppstoreCard
-          image="static/apps-images/instagram-5.jpg"
-          title={(<span>APP<br />OF THE<br />DAY</span>)}
-          titleColor="#000"
-          titlePosition="bottom"
-          titleLarge
-          closeButtonColor="#000"
-          app={appInstagram}
-          appColor="#000"
-        >
-          <p>Lorem ipsum, <b>dolor sit amet consectetur adipisicing</b> elit. Explicabo sapiente nisi accusantium earum quos culpa quam doloremque distinctio suscipit nobis corrupti eaque, debitis quasi quisquam rerum quas beatae dolorem eos?</p>
-          <p>Magnam obcaecati fugit, ullam nostrum in dolore sed ab culpa ipsum architecto sunt distinctio necessitatibus et. Quam laborum delectus tenetur rem quae itaque ad numquam, eveniet, repudiandae quas eum unde?</p>
-          <h3>Enim laboriosam repellat</h3>
-          <p>Dignissimos recusandae consectetur adipisci minima vel molestiae laboriosam quisquam libero quos sint, expedita necessitatibus. Asperiores, consectetur! Odio nobis odit placeat quos magni. Enim laboriosam repellat a blanditiis doloremque esse repellendus?</p>
-          <p>Commodi, similique tempora, nesciunt voluptatem blanditiis, dignissimos voluptas quidem cupiditate soluta magni dolorem sequi illum accusamus temporibus iste dolorum voluptates illo maxime sit nulla. Ullam, repellendus. Explicabo architecto laborum itaque.</p>
-        </AppstoreCard>
-      </div>
     </AppstorePage>
   );
 };
 
-export default Today;
+export default Listen;

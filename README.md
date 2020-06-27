@@ -1,4 +1,4 @@
-# App Store UI
+# Apple Music UI
 
 ## NPM Scripts
 

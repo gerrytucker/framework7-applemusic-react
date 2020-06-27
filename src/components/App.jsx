@@ -13,7 +13,7 @@ import PWA from '../js/pwa';
 import routes from '../js/routes';
 
 const AppComponent = () => {
-  const [activeTab, setActiveTab] = useState('today');
+  const [activeTab, setActiveTab] = useState('listen');
   const previousTab = useRef(null);
 
   useEffect(() => {
@@ -22,7 +22,7 @@ const AppComponent = () => {
 
   // Framework7 Parameters
   const f7params = {
-    name: 'App Store',
+    name: 'Apple Music',
     theme: 'ios',
     routes,
     autoDarkTheme: true,
@@ -44,29 +44,29 @@ const AppComponent = () => {
       <Views tabs className="safe-areas">
         <Toolbar tabbar labels bottom>
           <Link
-            onClick={() => onTabLinkClick('today')}
-            tabLink="#view-today"
+            onClick={() => onTabLinkClick('listen')}
+            tabLink="#view-listen"
             tabLinkActive
-            iconF7="today"
-            text="Today"
+            iconF7="play_circle_fill"
+            text="Listen Now"
           />
           <Link
-            onClick={() => onTabLinkClick('games')}
-            tabLink="#view-games"
-            iconF7="rocket_fill"
-            text="Games"
+            onClick={() => onTabLinkClick('browse')}
+            tabLink="#view-browse"
+            iconF7="square_grid_2x2_fill"
+            text="Browse"
           />
           <Link
-            onClick={() => onTabLinkClick('apps')}
-            tabLink="#view-apps"
-            iconF7="layers_alt_fill"
-            text="Apps"
+            onClick={() => onTabLinkClick('radio')}
+            tabLink="#view-radio"
+            iconF7="dot_radiowaves_left_right"
+            text="Radio"
           />
           <Link
-            onClick={() => onTabLinkClick('arcade')}
-            tabLink="#view-arcade"
-            iconF7="gamecontroller_alt_fill"
-            text="Arcade"
+            onClick={() => onTabLinkClick('library')}
+            tabLink="#view-library"
+            iconF7="music_albums_fill"
+            text="Library"
           />
           <Link
             onClick={() => onTabLinkClick('search')}
@@ -76,10 +76,10 @@ const AppComponent = () => {
           />
         </Toolbar>
 
-        <View id="view-today" onTabShow={() => setActiveTab('today')} main tab tabActive url="/today/" />
-        <View id="view-games" onTabShow={() => setActiveTab('games')} tab url="/games/" />
-        <View id="view-apps" onTabShow={() => setActiveTab('apps')} tab url="/apps/" />
-        <View id="view-arcade" onTabShow={() => setActiveTab('arcade')} tab url="/arcade/" />
+        <View id="view-listen" onTabShow={() => setActiveTab('listen')} main tab tabActive url="/listen/" />
+        <View id="view-browse" onTabShow={() => setActiveTab('browse')} tab url="/browse/" />
+        <View id="view-radio" onTabShow={() => setActiveTab('radio')} tab url="/radio/" />
+        <View id="view-library" onTabShow={() => setActiveTab('library')} tab url="/library/" />
         <View id="view-search" onTabShow={() => setActiveTab('search')} tab url="/search/" />
 
       </Views>

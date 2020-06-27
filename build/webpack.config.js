@@ -41,7 +41,7 @@ module.exports = {
   },
   devtool: env === 'production' ? 'source-map' : 'eval',
   devServer: {
-    host: '0.0.0.0',
+    host: 'localhost',
     hot: true,
     open: true,
     compress: true,
@@ -203,6 +203,7 @@ module.exports = {
     ]),
 
     new WorkboxPlugin.InjectManifest({
+      maximumFileSizeToCacheInBytes: 3e7,
       swSrc: resolvePath('src/service-worker.js'),
       exclude: [
         // eslint-disable-next-line

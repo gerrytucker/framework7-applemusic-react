@@ -1,4 +1,5 @@
 import React from 'react';
+
 import {
   Block,
   Button,
@@ -7,105 +8,107 @@ import {
   ListItem,
 } from 'framework7-react';
 
-import { games } from '../js/data';
+import { apps } from '../js/data';
 
 import AppstorePage from '../components/AppstorePage';
 import FeaturedApps from '../components/FeaturedApps';
 import AppsTableList from '../components/AppsTableList';
 import AppstoreBlockTitle from '../components/AppstoreBlockTitle';
 
-const Games = () => {
-  const featuredGames = games.filter((app) => !!app.featured);
-  const playingNow = games;
-  const popularGames = [...games]
+const Radio = () => {
+  const featuredApps = apps.filter((app) => !!app.featured);
+  const usingNow = apps;
+  const popularApps = [...apps]
     .sort((app1, app2) => app2.rating - app1.rating)
     .slice(0, 13)
     .slice(1);
-  const newGames = [...games]
+  const newApps = [...apps]
     .sort((app1, app2) => new Date(app2.release_date).getTime() - new Date(app1.release_date).getTime())
     .slice(0, 12);
-  const topFreeGames = [...popularGames].reverse();
-  const editorsChoice = games.slice(10);
+  const topFreeApps = [...popularApps].reverse();
+  const editorsChoice = apps.slice(5);
 
   return (
-    <AppstorePage title="Games">
-      <FeaturedApps backText="Games" apps={featuredGames} />
+    <AppstorePage title="Apps">
+      <FeaturedApps backText="Apps" apps={featuredApps} useIcon />
 
-      <AppstoreBlockTitle title="What We're Playing Now">
+      <AppstoreBlockTitle title="Using Now">
         <Link>See All</Link>
       </AppstoreBlockTitle>
-      <AppsTableList backText="Games" apps={playingNow} />
+      <AppsTableList backText="Apps" apps={usingNow} />
 
-      <AppstoreBlockTitle title="Popular Games">
+      <AppstoreBlockTitle title="Popular Apps">
         <Link>See All</Link>
       </AppstoreBlockTitle>
-      <AppsTableList backText="Games" apps={popularGames} />
+      <AppsTableList backText="Apps" apps={popularApps} />
 
-      <AppstoreBlockTitle title="New Games We Love">
+      <AppstoreBlockTitle title="New & Updated">
         <Link>See All</Link>
       </AppstoreBlockTitle>
-      <AppsTableList backText="Games" apps={newGames} />
+      <AppsTableList backText="Apps" apps={newApps} />
 
-      <AppstoreBlockTitle title="Top Free Games">
+      <AppstoreBlockTitle title="Top Free Apps">
         <Link>See All</Link>
       </AppstoreBlockTitle>
-      <AppsTableList backText="Games" apps={topFreeGames} />
+      <AppsTableList backText="Apps" apps={topFreeApps} />
 
       <AppstoreBlockTitle title="Top Categories">
         <Link>See All</Link>
       </AppstoreBlockTitle>
       <List className="categories-list safe-areas-inset" noChevron noHairlines>
         <ListItem
-          title="Indie"
+          title="Apple Watch Apps"
           link="#"
         >
-          <span role="img" slot="media" aria-label="Indie">💎</span>
+          <span role="img" slot="media" aria-label="Apple Watch Apps">⌚</span>
         </ListItem>
         <ListItem
-          title="Casual"
+          title="Photo & Video"
           link="#"
         >
-          <span role="img" slot="media" aria-label="Casual">👾</span>
+          <span role="img" slot="media" aria-label="Photo & Video">📷</span>
         </ListItem>
         <ListItem
-          title="Strategy"
+          title="Entertaiment"
           link="#"
         >
-          <span role="img" slot="media" aria-label="Strategy">🏰</span>
+          <span role="img" slot="media" aria-label="Entertaiment">🍿</span>
         </ListItem>
         <ListItem
-          title="Action"
+          title="Kids"
           link="#"
         >
-          <span role="img" slot="media" aria-label="Action">⚔️</span>
+          <span role="img" slot="media" aria-label="Kids">🎈</span>
         </ListItem>
         <ListItem
-          title="Racing"
+          title="Social Networking"
           link="#"
         >
-          <span role="img" slot="media" aria-label="Racing">🏁</span>
+          <span role="img" slot="media" aria-label="Social Networking">💬</span>
+        </ListItem>
+        <ListItem
+          title="Lifestyle"
+          link="#"
+        >
+          <span role="img" slot="media" aria-label="Lifestyle">🛋️</span>
         </ListItem>
       </List>
 
       <AppstoreBlockTitle title="Editors' Choice">
         <Link>See All</Link>
       </AppstoreBlockTitle>
-      <AppsTableList backText="Games" apps={editorsChoice} />
+      <AppsTableList backText="Apps" apps={editorsChoice} />
 
       <AppstoreBlockTitle title="Quick Links">
         <Link>See All</Link>
       </AppstoreBlockTitle>
       <List className="quick-links-list safe-areas-inset" noChevron noHairlines>
         <ListItem
-          title="Try Apple Arcade"
-          link="#"
-        />
-        <ListItem
           title="About In-App Purchases"
           link="#"
         />
         <ListItem
-          title="Parents' Guide to the App Store"
+          title="Parents' Guide to the Apple Music"
           link="#"
         />
         <ListItem
@@ -127,4 +130,4 @@ const Games = () => {
   );
 };
 
-export default Games;
+export default Radio;

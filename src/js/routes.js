@@ -1,25 +1,25 @@
-import Today from '../pages/Today';
-import Games from '../pages/Games';
-import Apps from '../pages/Apps';
-import Arcade from '../pages/Arcade';
+import Listen from '../pages/Listen';
+import Browse from '../pages/Browse';
+import Radio from '../pages/Radio';
+import Library from '../pages/Library';
 import Search from '../pages/Search';
 
 const routes = [
   {
-    path: '/today/',
-    component: Today,
+    path: '/listen/',
+    component: Listen,
   },
   {
-    path: '/games/',
-    component: Games,
+    path: '/browse/',
+    component: Browse,
   },
   {
-    path: '/apps/',
-    component: Apps,
+    path: '/radio/',
+    component: Radio,
   },
   {
-    path: '/arcade/',
-    component: Arcade,
+    path: '/library/',
+    component: Library,
   },
   {
     path: '/search/',
