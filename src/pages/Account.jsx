@@ -35,7 +35,7 @@ const Account = () => {
         <List>
           <ListItem
             title="Notifications"
-            link
+            link="/notifications"
           />
         </List>
         <BlockTitle>APPS WITH ACCESS</BlockTitle>
