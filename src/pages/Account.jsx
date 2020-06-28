@@ -45,6 +45,9 @@ const Account = () => {
         <List>
           <ListItem>Apple Music and TV Web Player</ListItem>
         </List>
+        <List>
+          <ListItem>Shazam</ListItem>
+        </List>
       </Page>
     </Popup>
   );
