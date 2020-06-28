@@ -28,19 +28,17 @@ const Account = () => {
         </List>
         <List>
           <ListButton>See what friends are listening to</ListButton>
+          <BlockFooter>
+            <p>Set up your profile to share your music and see what your friends are playing.</p>
+          </BlockFooter>
         </List>
-        <BlockFooter>
-          <p>Set up your profile to share your music and see what your friends are playing.</p>
-        </BlockFooter>
         <List>
           <ListItem
             title="Notifications"
             link
           />
         </List>
-        <BlockTitle>
-          <p>APPS WITH ACCESS</p>
-        </BlockTitle>
+        <BlockTitle>APPS WITH ACCESS</BlockTitle>
         <List>
           <ListItem>Apple Music and TV Web Player</ListItem>
         </List>
