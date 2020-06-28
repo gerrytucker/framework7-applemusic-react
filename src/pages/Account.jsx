@@ -25,6 +25,9 @@ const Account = () => {
           <ListButton>Add Funds to Apple ID</ListButton>
           <ListButton>Manage Subscription</ListButton>
           <ListButton>Upgrade to Family Plan</ListButton>
+          <BlockFooter>
+            <p>Just £5.00 more per month for up to 6 people.</p>
+          </BlockFooter>
         </List>
         <List>
           <ListButton>See what friends are listening to</ListButton>
@@ -35,7 +38,7 @@ const Account = () => {
         <List>
           <ListItem
             title="Notifications"
-            link="/notifications"
+            link="#"
           />
         </List>
         <BlockTitle className="subtitle">
