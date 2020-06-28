@@ -38,7 +38,10 @@ const Account = () => {
             link="/notifications"
           />
         </List>
-        <BlockTitle className="subtitle">APPS WITH ACCESS</BlockTitle>
+        <BlockTitle className="subtitle">
+          <Link href="#" slot="right">Edit</Link>
+          APPS WITH ACCESS
+        </BlockTitle>
         <List>
           <ListItem>Apple Music and TV Web Player</ListItem>
         </List>
