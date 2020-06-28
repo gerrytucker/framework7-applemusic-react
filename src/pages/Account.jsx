@@ -39,13 +39,11 @@ const Account = () => {
           />
         </List>
         <BlockTitle className="subtitle">
-          <Link href="#" slot="right">Edit</Link>
           APPS WITH ACCESS
+          <Link href="#" slot="right">Edit</Link>
         </BlockTitle>
         <List>
           <ListItem>Apple Music and TV Web Player</ListItem>
-        </List>
-        <List>
           <ListItem>Shazam</ListItem>
         </List>
       </Page>

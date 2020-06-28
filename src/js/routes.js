@@ -36,12 +36,6 @@ const routes = [
     },
   },
   {
-    path: '/notifications/',
-    popup: {
-      asyncComponent: () => import(/* webpackChunkName: "notifications" *//* webpackPreload: true */ '../pages/Notifications'),
-    },
-  },
-  {
     path: '(.*)',
     asyncComponent: () => import(/* webpackChunkName: "404" */ '../pages/404'),
   },
